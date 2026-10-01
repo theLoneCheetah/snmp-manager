@@ -1,0 +1,13 @@
+annotated-types==0.8.0
+dotenv==0.9.9
+git-filter-repo==2.47.0
+icmplib==3.0.4
+pyasn1==0.6.3
+pydantic==2.13.3
+pydantic-extra-types==2.11.1
+pydantic_core==2.46.3
+pysnmp==7.1.22
+python-dotenv==1.2.4
+PyYAML==6.0.3
+typing-inspection==0.4.4
+typing_extensions==4.16.0
