@@ -227,9 +227,9 @@ async def main() -> None:
 
     switch_handler = await L2SwitchHandler.create(ipaddress, port)
 
-    # await switch_config_example(switch_handler)
+    await trusted_host_config_example(switch_handler)
 
-    pprint(await switch_handler.scan_available_mibs())
+    # pprint(await switch_handler.scan_available_mibs())
 
     print("Overall time:", perf_counter() - start_time)
 

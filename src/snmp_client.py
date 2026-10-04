@@ -48,7 +48,7 @@ class SNMPClient(ABC):
         self._context = None
         self._max_repetitions = 49   # can be changed
 
-        with open("v2/oid.yaml", "r") as F:
+        with open("src/oid.yaml", "r") as F:
             self._config = yaml.safe_load(F)
     
     @classmethod
@@ -209,7 +209,7 @@ class SNMPClient(ABC):
     async def _get(
                 self,
                 config_fragment: dict[str, Any],   # one of specified oid groups
-                include_params: dict[str, Any],   # parameters with values
+                include_params: list[str],   # list of parameter names
                 oid_vars: dict[str, Any] | None = None,   # variables to substitute into oids
                 skip_init: bool = False   # flag for marking requests without pre-initialization
             ) -> dict[str, Any]:
